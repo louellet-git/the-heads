@@ -30,9 +30,9 @@ How to choose the heads:
 - One head for each kind of work that has its own queue.
 - One head for tools, data and build.
 - One head for quality and risk. This head writes no product work.
-- A supporting head is permitted (for example economic conditions, or the history of markets): it gives briefs and
-  answers to the other heads, it takes no action of its own, and it sets no model input. A head that wants an input
-  from a brief writes an assumption record.
+- A supporting head is permitted (for example the context of the field, the history of similar cases, or the
+  rules of a regulator): it gives briefs and answers to the other heads, it takes no action of its own, and it sets
+  no input of a model or a product. A head that wants an input from a brief writes an assumption record.
 - A new kind of head needs a decision of the owner of the repo and a new row.
 
 Example: the title `<PREFIX>-A - Head of Tools` in the account `<login>` is the Head of
