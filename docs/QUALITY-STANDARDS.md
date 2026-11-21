@@ -36,6 +36,12 @@ The quality assurance (QA) agents never review work from their own context.
 | MAJ | A defect that changes a result or hides a risk; new logic with no test; a claim with no evidence; a binding rule broken | Merge and publication |
 | MIN | A defect with no effect on a result (a weak test, an unclear sentence, a style point) | Nothing. List it with an owner. |
 
+**Proportion.** Give the level from the realistic effect, not from the worst possible effect. In an
+internal process or document, a risk that is only possible is a MIN, on the condition that no value,
+data or action can change. Do not slow the work for it. A defect that is present keeps the level of the
+table. Apply the levels strictly to a result that a person can use for a decision or an action. A hard
+limit (section 8) keeps the level that the table gives it.
+
 Verdicts: **PASS** (no open CRIT or MAJ), **PASS-WITH-NOTES** (the same, with MIN items
 listed), **REVISE** (a MAJ is open), **REJECT** (a CRIT is open). "Pass" means PASS or
 PASS-WITH-NOTES. A reviewer passes work that is correct and usable.
@@ -55,6 +61,8 @@ a row in the ledger of your own folder; no secret and no private file in the com
 | Model or design change | The reason does not use the target. Fixed-answer tests pass. Reference results are the same, or the change is the aim. The records of the model and its assumptions are current. |
 | Investigation | One findings file: question, method, evidence, defects, what stays open. Each number was calculated again by a QA agent. |
 | Report for a decision | The review steps of the project were done in order. A person approved it. |
+| Recommendation for an action with real consequences (for example a trade) | Less than 3 pages. It rests on a result that passed the review steps of the project. The person decides the action. |
+| Backtest or experiment that a person uses for a decision | A hypothesis file committed before the first run (the hypothesis, the out-of-sample window, the cost, the number of variants tried before it). One add-only log file for each run, written before any result shows; the count of the logs is the variant count (a deleted log stays counted from the git history). A look-ahead test that changes later data and shows that no earlier decision moves. A window that was seen before is marked "not clean". |
 | Action with real consequences (for example a trade or a release) | A write-up of at most 2 pages, one file for each action: the logic, the action, the steps taken, the risks; the result after it. |
 | Document | The text follows the language standard. Each command and path exists. Each number has a source. |
 
@@ -68,6 +76,7 @@ of the project here. The rows are examples.
 | Code change | `<builder>` | `<code-reviewer>` | Correct, tested, repo rules |
 | Report with numbers | `<analyst>` | `<auditor>` | Numbers calculated again |
 | Document or record | the author | `<document-reviewer>` | Purpose, evidence, language |
+| Recommendation for an action | the head of the area | `<validator>`, `<auditor>`, `<risk officer>` | The result supports the action and its size; each number calculated again; the risks |
 
 A small change (a typing error, a count, a ticket, a ledger row) has no gate: the
 orchestrator examines it. A test agent and a risk agent are not in the gates. The

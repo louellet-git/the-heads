@@ -30,6 +30,9 @@ How to choose the heads:
 - One head for each kind of work that has its own queue.
 - One head for tools, data and build.
 - One head for quality and risk. This head writes no product work.
+- A supporting head is permitted (for example economic conditions, or the history of markets): it gives briefs and
+  answers to the other heads, it takes no action of its own, and it sets no model input. A head that wants an input
+  from a brief writes an assumption record.
 - A new kind of head needs a decision of the owner of the repo and a new row.
 
 Example: the title `<PREFIX>-A - Head of Tools` in the account `<login>` is the Head of
@@ -102,6 +105,11 @@ and each session has its own machine. Keep the data in one repo, the store `<own
 - If your work needs data that is not in the store, send the data sets and the list of
   items to the Head of Tools.
 - The content, the dates and the traps are in the `README.md` of the store.
+- Each file in the store has a source note: the source, the date, the terms for a public copy, and the
+  citation. Read the terms before the first copy. A source that refuses automated access, or terms that forbid a
+  copy, stops the copy; do not get around it.
+- A command that downloads a missing file by itself is a trap: give the tools a cache-only switch, and run agents
+  with it on.
 
 ## 3. Your team
 

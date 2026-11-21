@@ -2,7 +2,8 @@
 
 A team is the set of agents that one head starts. An agent is a file in
 `.claude/agents/<name>.md`. A shared procedure is a skill in `.claude/skills/<name>/SKILL.md`.
-All agents use the Sonnet model unless the person says otherwise. The standards are in
+The agent files give the Sonnet model. For one run, the orchestrator can choose a different model that
+fits the job (a permission, not a duty). The standards are in
 `docs/QUALITY-STANDARDS.md`; the rules of the repo are in `CLAUDE.md`. The rules for who
 makes and changes agents and skills are in `chiefs/ORIENTATION.md`, section 3.
 Keep agents and skills lean. They are not obsessive and not tight-fisted.
@@ -72,6 +73,9 @@ The orchestrator is the main Claude Code session. A head is the orchestrator of 
 7. It adds a row to the ledger of its own folder for each run. After the merge it moves
    the ticket file to `PLANNING/board/done/` (never deletes it).
 8. A decision for a person (a rule, a closed decision, a paid source) goes to the person.
+9. A brief that permits web search says "pages only, no data files". A data file that a document cites goes into
+   the data store first (a request to the head of tools), so that a reviewer can reproduce it.
+10. In each "Never" list of an agent file, each item starts with "Never" (a later item without it reads as an order).
 
 ## How a person starts an agent
 
