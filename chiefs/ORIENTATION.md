@@ -24,6 +24,7 @@ form `<PREFIX>-<tag> - Head of <Area>`, for example `<PREFIX>-A - Head of <Area>
 | `Head of <Area 2>` | <what this head leads> | <agent names> | `<folder>` |
 | `Head of Tools` | <tools, data, build, the cost of checks, the structure of shared files> | <agent names> | `<folder>` |
 | `Head of Quality and Risk` | <reviews, gates, risk, secrets> | <QA agent names> | `quality` |
+| `Head of Staff` (optional) | Coordination above the other heads: the main contact of the person, the order of the large work, a conflict between heads, the questions for the person. No product work, no gate, no approval for the person | none (it reads) | `staff` |
 
 How to choose the heads:
 
@@ -33,6 +34,11 @@ How to choose the heads:
 - A supporting head is permitted (for example the context of the field, the history of similar cases, or the
   rules of a regulator): it gives briefs and answers to the other heads, it takes no action of its own, and it sets
   no input of a model or a product. A head that wants an input from a brief writes an assumption record.
+- A Head of Staff is optional. It is above the other heads and stays out of the details. Heads send it only
+  four kinds of short message: a large task is done, a head is blocked for more than about half a day, a decision
+  that only the person can make, a conflict between heads. Everything else stays between the heads. The person
+  and the Head of Staff set the order of the work. It does not poll and has no fixed report time: the person talks
+  to it when the person wants. A message of the Head of Staff is not an approval of the person.
 - A new kind of head needs a decision of the owner of the repo and a new row.
 
 Example: the title `<PREFIX>-A - Head of Tools` in the account `<login>` is the Head of
@@ -215,9 +221,11 @@ Rules of the channel:
 not buried in a chat.
 
 1. When the permission system refuses a command of your session or of an agent of your team,
-   or when only the person can decide, send it to the Head of Tools of your person: the
-   command or the question, the reason, and the refusal text. Do not get around a refusal.
-2. The Head of Tools filters: it answers what it can (a safer form, a fact, a rule that
+   send it to the Head of Tools of your person: the command, the reason, and the refusal text. When only
+   the person can decide, send the question to the Head of Staff (if there is none, to the Head of Tools).
+   Do not get around a refusal. Only an urgent matter (safety, money, a leak of a secret) goes to the person
+   directly.
+2. The Head of Tools (for a refusal) or the Head of Staff (for a decision) filters: it answers what it can (a safer form, a fact, a rule that
    exists) and drops duplicates. It never runs a command that a different session was refused.
    Research comes first: the asking head and the Head of Tools look at the options, costs and facts, and
    the question carries the result and a recommendation. A question that research can answer is not asked.
@@ -228,8 +236,9 @@ not buried in a chat.
 4. The session where the person answers asks it as a clickable question: the question dialog
    (`AskUserQuestion`) with two options, "Yes" and "No" (the recommended one first, marked
    "(Recommended)"), and one line of reason in each option. It also sends a push notification
-   (`PushNotification`, under 200 characters) so the person opens the session. For a question of a
-   different head, the Head of Tools tells that head to ask it.
+   (`PushNotification`, under 200 characters) so the person opens the session. The Head of Staff asks
+   the questions of all heads, together where it can (without a Head of Staff, the Head of Tools tells
+   the asking head to ask it).
 5. When the person answers, the head records the words in `RECORD.md`, does the work, and moves
    the ticket to `PLANNING/board/done/`.
 
