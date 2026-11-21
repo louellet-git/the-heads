@@ -47,7 +47,7 @@ It has the rules for how a head makes them.
 - Questions for the person are yes/no tickets, asked as a clickable question with a push
   (`chiefs/ORIENTATION.md`, section 5).
 - Documents use ASD-STE100 Simplified Technical English, to about 85%.
-- Each action with real consequences (for example a trade) has a write-up of at most 2 pages.
+- Each action with real consequences (for example a release, a purchase, a change to a live system, a message to customers, or a trade) has a write-up of at most 2 pages.
 - After a ticket, a head reports and takes the next ticket with no wait, until the person
   says stop.
 - Agents and skills stay lean. They are not obsessive and not tight-fisted.

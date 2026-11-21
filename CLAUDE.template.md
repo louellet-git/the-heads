@@ -34,7 +34,7 @@ Read this file first. Then read `README.md` (commands), `docs/TEAMS.md` (the age
   Simplified Technical English, to about 85% (default of the owner; a project can change it): a
   sentence can break a rule where the STE form is less clear. A document that already meets
   this needs no rework. Frozen documents keep their original text.
-- **Write-ups of actions.** Each action with real consequences (for example a trade) has one
+- **Write-ups of actions.** Each action with real consequences (for example a release, a purchase, a change to a live system, a message to customers, or a trade) has one
   write-up of at most 2 pages: the logic and the steps taken, then the result. One file for each
   action; a write-up is a record and is never deleted.
 - **Ticket first.** Before you start, set a board ticket to `in-progress` with your login
