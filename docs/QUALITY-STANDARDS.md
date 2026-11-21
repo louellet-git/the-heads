@@ -58,12 +58,15 @@ a row in the ledger of your own folder; no secret and no private file in the com
 |---|---|
 | Code change | New logic has tests with fixed answers. The test suites pass. The real command ran. Reference results are the same, or the change is the aim of the ticket. Documents that name commands are right; no document names a test count. |
 | Data source | Terms read and noted. Honest client name. Fixture tests pass. One real run with a date. The source is listed. The traps are in `docs/traps/`. |
-| Model or design change | The reason does not use the target. Fixed-answer tests pass. Reference results are the same, or the change is the aim. The records of the model and its assumptions are current. |
+| Model or design change | The reason does not use the target. Fixed-answer tests pass. Reference results are the same, or the change is the aim. The records of the model and its assumptions are current. A change that moves a value has a point-in-time backtest, or the model document says "Backtest: none applies, because ...". |
 | Investigation | One findings file: question, method, evidence, defects, what stays open. Each number was calculated again by a QA agent. |
 | Report for a decision | The review steps of the project were done in order. A person approved it. |
 | Recommendation for an action with real consequences (for example a release, a purchase, a change to a live system, a message to customers, or a trade) | Less than 3 pages. It rests on a result that passed the review steps of the project. The person decides the action. |
 | Action with real consequences (for example a release, a purchase, a change to a live system, a message to customers, or a trade) | A write-up of at most 2 pages, one file for each action: the logic, the action, the steps taken, the risks; the result after it. |
 | Document | The text follows the language standard. Each command and path exists. Each number has a source. |
+
+Each model has a model document and each assumption has a record. With many heads, give each head a range of
+record numbers (for example A-001 to A-099 for one head), so that parallel work does not use the same number.
 
 ## 5. Gates
 

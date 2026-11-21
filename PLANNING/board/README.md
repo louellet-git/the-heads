@@ -1,6 +1,9 @@
 # Board
 
-The board is the one list of work that a person does now or does next.
+The board is the one list of work that a person does now or does next. With a Head of Staff, the work has a
+shape, epic → story → ticket, on one page `PLANNING/board/EPICS.md` that it keeps: an epic serves one decision
+of the person and has a condition that ends it; a story is one result that the person can use or check, with
+one head that leads it; a ticket is one branch and one pull request.
 One ticket is one file: `PLANNING/board/<id>.md`.
 Work without a ticket is in the backlog: `<PLANNING/tickets.md>`.
 
@@ -27,6 +30,7 @@ Free text.
 |---|---|
 | `id` | `T-YYYYMMDD-<slug>`. The file name is the id. |
 | `title` | Short. It starts with a verb. |
+| `story` | With `EPICS.md`: the story of the ticket, for example `E1.S3`. Each new ticket has it. |
 | `area` | <List the areas of the project.>, and `ask` (a question or a permission request for the person; `chiefs/ORIENTATION.md`, section 5). |
 | `status` | `backlog`, `in-progress`, `review`, or `done`. |
 | `owner` | A GitHub login. It has a meaning from `in-progress`. |

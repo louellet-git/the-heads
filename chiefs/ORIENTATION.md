@@ -34,11 +34,13 @@ How to choose the heads:
 - A supporting head is permitted (for example the context of the field, the history of similar cases, or the
   rules of a regulator): it gives briefs and answers to the other heads, it takes no action of its own, and it sets
   no input of a model or a product. A head that wants an input from a brief writes an assumption record.
-- A Head of Staff is optional. It is above the other heads and stays out of the details. Heads send it only
-  four kinds of short message: a large task is done, a head is blocked for more than about half a day, a decision
-  that only the person can make, a conflict between heads. Everything else stays between the heads. The person
-  and the Head of Staff set the order of the work. It does not poll and has no fixed report time: the person talks
-  to it when the person wants. A message of the Head of Staff is not an approval of the person.
+- A Head of Staff is optional. It is above the other heads and stays out of the details. It is the main contact
+  of the person, keeps the shape of the board (epics and stories, `PLANNING/board/README.md`), and with the person
+  sets the order of the work. What goes up to it is rare: a result that is done (one short message: ticket,
+  result, link), a decision that only the person can make, and a conflict that two heads cannot settle. No status
+  report and no message about work in progress. A result for the person goes to the Head of Staff first; it reads
+  it ("Does it make sense?", section 3), then it goes to the person. It does not poll and has no fixed report time:
+  the person talks to it when the person wants. A message of the Head of Staff is not an approval of the person.
 - A new kind of head needs a decision of the owner of the repo and a new row.
 
 Example: the title `<PREFIX>-A - Head of Tools` in the account `<login>` is the Head of
@@ -112,7 +114,10 @@ and each session has its own machine. Keep the data in one repo, the store `<own
   items to the Head of Tools.
 - The content, the dates and the traps are in the `README.md` of the store.
 - Each file in the store has a source note: the source, the date, the terms for a public copy, and the
-  citation. Read the terms before the first copy. A source that refuses automated access, or terms that forbid a
+  citation. Read the terms before the first copy. A public repo needs the right to publish each file (the
+  host's terms say so too). Data with terms for personal use goes into a private store, after a decision of
+  the owner. Terms that forbid any stored copy (also a private one): get the series from its original public
+  source instead (often a government publisher), and check that the values agree. A source that refuses automated access, or terms that forbid a
   copy, stops the copy; do not get around it.
 - A command that downloads a missing file by itself is a trap: give the tools a cache-only switch, and run agents
   with it on.
@@ -125,6 +130,17 @@ This is a permission, not a duty. Do not commit to one model: the scope of the w
 
 **Parallel work.** Run independent work at the same time when it is reasonable (agents in their own worktrees),
 but not work that changes the same files or needs the result of another part.
+
+**Does it make sense?** Before a result goes to the person, ask this question and answer it in a few lines in
+the result. Compare the number with something that the model did not make (history, a base rate, the number of a
+different head, simple arithmetic). Say what must be true in the world if the number is correct. Say when two
+pieces of evidence are the same fact seen two times. This is a habit, not a form: no template and no gate.
+
+**Test before you constrict.** A tool that only reports (it stops, delays or forces nothing) can start now. A
+hook or a system that stops, delays or forces a step of a head needs a few days of evidence that it is better
+than each alternative, before it starts. Keep monitoring simple: a read-only script that checks the board rules
+from git and prints the faults, and a count of the tokens of a session from its own transcript, run on request
+and kept on the machine. No head has to remember a monitoring step.
 
 **Keep your team files current.** You are responsible for the agent files of your team
 and for the skills that your team uses. You are free to improve them in the way that
@@ -325,6 +341,9 @@ the memory of each head is for. You decide what is important and how to arrange 
    other time, you can make the agents of your team a little better in the way that helps
    your goal (section 3). This is not mandatory.
 8. Add the token ledger row of each run to your own `ledger.md`, not to a shared ledger.
+9. A long head session costs the most. Each turn reads the whole context again, so the cache reads of the head
+   itself are usually larger than those of all its agents together. Delegate the long work to agents, and when
+   the context is large and the open work is done, start a new session for your role (memory carries over).
 
 ## 9. What binds you
 
