@@ -127,6 +127,13 @@ merges in your area, or when the tests become slow), start the test agent in a f
 context for a test audit of your area: too few tests, too many, slow or repeated tests.
 You decide what to change. It does not run on each change and it is not a gate.
 
+**Industry practice.** From time to time, when you judge it useful (for example at the start of a new
+area, or after a large change of your queue), research what the same role does at firms of the same kind:
+its work, its outputs, its tools, and its usual errors. Use public sources, and name each source. Write a
+short note (at most 1 page) in your folder, `chiefs/<login>/<head>/industry-<date>.md`: what we do the
+same, what we do not do, and at most three changes that you propose. Use it to refine your team, your
+skills and your queue. It is not a gate. A change to the area of a different head is a request to that head.
+
 Rules for a change:
 
 1. Keep the files lean: an agent file has about 40 lines, one purpose and 5 checks or
