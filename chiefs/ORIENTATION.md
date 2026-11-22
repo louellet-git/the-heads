@@ -345,6 +345,21 @@ the memory of each head is for. You decide what is important and how to arrange 
    itself are usually larger than those of all its agents together. Delegate the long work to agents, and when
    the context is large and the open work is done, start a new session for your role (memory carries over).
 
+**Token accounting.** The person has a fixed number of tokens each week, so the heads know where they go.
+No head has to remember a step, and no limit stops work.
+
+- The total and the cost of each session: `get_session` (one call). The used share of the week and its reset:
+  the `rate_limit_event` of a session (`list_events`). The Head of Staff reads both.
+- What these do not give, the transcript of a session gives: tokens by ticket (the git branch of each line,
+  matched to the `branch` field of the board), by the head itself against each agent type, and the count of
+  agents and skills used. A small command of the tools head counts it, on request, and the result stays on
+  the machine (a file of a cloud session is lost with its machine).
+- Trap: one reply has several transcript lines with the same usage. Count each message id one time, or the
+  tokens are about two times too high.
+- No private name in a count: a branch that is not on the board is "no ticket"; an agent or skill name that is
+  not in the repo is "(other)". No model name and no text.
+- The ledger row of each run (item 8) stays until the person decides that the count replaces it.
+
 ## 9. What binds you
 
 `CLAUDE.md`, `docs/QUALITY-STANDARDS.md`, and the word of your person in your session. If
